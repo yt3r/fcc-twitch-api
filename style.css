@@ -1,0 +1,164 @@
+@font-face {
+  font-family: 'Lazer-84';
+  src: url('Lazer84.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'VCR-OSD-MONO';
+  src: url('VCR_OSD_MONO_1.001.ttf') format('truetype');
+}
+
+/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body { 
+  background-color: hsla(198, 100%, 63%, 1);
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+			align-content: center;
+	min-width: 20rem;
+	margin: 2rem auto; 
+}
+
+#main-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+button {
+  font-size: 2rem;
+  font-family: 'Lazer-84', cursive;
+  border: 0.2rem solid hsla(44, 91%, 50%, 1);
+  margin: 0.4rem;
+  padding: 0.4rem 0.6rem;
+  color: hsla(290, 59%, 40%, 1);
+  background: inherit;
+}
+
+button:hover, .active {
+  background: hsla(44, 91%, 50%, 1);
+}
+
+#results {
+  font-family: 'VCR-OSD-MONO';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-flow: row wrap-reverse;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: hsla(330, 100%, 50%, 1);
+  background-color: hsla(44, 91%, 50%, 1);
+  border: 0.2rem solid hsla(344, 91%, 55%, 1);
+  margin: 0.4rem 0;
+  -webkit-animation: slide-left 1.4s ease;
+  animation: slide-left 1.4s ease;
+}
+
+.left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-flow: column;
+  flex: 3;
+  -webkit-flex: 3;
+  -moz-flex: 3;
+  order: 0;
+  -webkit-order: 0;
+  -moz-flex-order: 0;
+  margin-left: 0.4rem;
+}
+
+.left-top {
+	margin-top: 0.4rem;
+	margin-bottom: auto;
+}
+
+.left-bottom {
+	display: flex;
+	flex-flow: row wrap;
+	margin-top: auto;
+	margin-bottom: 0.4rem;
+}
+
+.logo {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+}
+
+.display-name {
+	margin-left: 0.4rem;
+	margin-top: auto;
+}
+
+.preview {
+  margin: 0.4rem;
+  flex: 3;
+  -webkit-flex: 3;
+  -moz-flex: 3;
+  max-width: 20rem;
+  height: auto;
+  order: 1;
+  -webkit-order: 1;
+  -moz-flex-order: 1;
+}
+
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(900px);
+            transform: translateX(900px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(900px);
+            transform: translateX(900px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
